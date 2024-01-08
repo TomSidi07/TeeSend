@@ -1,3 +1,4 @@
+/* root configaration */
 :root {
   --color-primary: #242525;
   --color-secondary: #44775d;
@@ -10,6 +11,7 @@
   --color-hover: #c7c7c781;
   --border-radius: 0.5rem;
 }
+/* default settings */
 *,
 *::before,
 *::after {
@@ -27,7 +29,7 @@ body {
   max-width: 1100px;
   min-width: 300px;
 }
-
+/* tee container */
 .container-tee {
   display: flex;
   flex-direction: column;
@@ -47,6 +49,7 @@ body {
   box-shadow: 0 0 0 20px var(--color-body);
   padding: 2rem 4rem;
 }
+/* tee header */
 .tee-header {
   display: flex;
   align-items: center;
@@ -56,10 +59,27 @@ body {
   width: 100%;
   border-radius: 10px;
 }
+/* tee content */
 .tee-content {
   flex-grow: 0.8;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  width: 100%;
 }
+/* form controls */
+.form-control {
+  width: 100%;
+  border-radius: var(--border-radius);
+  border: none;
+  outline: 0;
+  padding: 1rem 2rem;
+}
+.form-control::placeholder {
+  color: lightgray;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
