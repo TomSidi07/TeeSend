@@ -5,11 +5,12 @@
   --color-ternary: #cecece;
   --color-quarter: #00b496;
   --color-danger: #d12e2e;
-  --color-success: rgb(5, 231, 118);
+  --color-success: #05e776;
   --color-warning: #ffbb00;
   --color-body: #f6f1f2;
   --color-hover: #c7c7c781;
   --border-radius: 0.5rem;
+  --transition: 0.25s all ease;
 }
 /* default settings */
 *,
@@ -35,8 +36,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50rem;
-  height: 40rem;
+  width: 60rem;
+  height: 50rem;
   background-color: var(--color-primary);
   color: var(--color-body);
   align-self: center;
@@ -75,6 +76,7 @@ body {
   border: none;
   outline: 0;
   padding: 1rem 2rem;
+  transition: var(--transition);
 }
 .form-control::placeholder {
   color: lightgray;
@@ -82,4 +84,35 @@ body {
   font-size: 1.6rem;
   text-transform: uppercase;
 }
+.form-control:focus {
+  box-shadow: 0 0 0 0.4rem var(--color-hover);
+}
 
+/* btn */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1rem 3rem;
+  border: 0;
+  outline: 0;
+  border-radius: var(--border-radius);
+  margin: 1rem auto;
+  transition: var(--transition);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.btn:hover {
+  background-color: #03ce68;
+}
+.btn:active {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px var(--color-hover);
+  color: var(--color-success);
+}
+.btn--sucess {
+  background-color: var(--color-success);
+  color: #f6f1f2;
+}
