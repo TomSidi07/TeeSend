@@ -5,12 +5,21 @@ class MessageView {
   //The user name
   userName = this.teeForm[0];
   // User email
-  email = this.teeForm[1];
+  userEmail = this.teeForm[1];
   // user message
-  message = this.teeForm[2];
+  userMessage = this.teeForm[2];
   btn = document.querySelector("tee-btn");
   Handler(func) {
     this.teeBtn.addEventListener("click", func.bind(this));
+  }
+  get name() {
+    return this.userName.value;
+  }
+  get email() {
+    return this.userEmail.value;
+  }
+  get message() {
+    return this.userMessage.value;
   }
 }
 export default new MessageView();

@@ -4,11 +4,11 @@ import MessageView from "../views/MessageView.js";
 let logMessage = (eve) => {
   try {
     eve.preventDefault();
-    let tom = new User("Tom", "Sidibe");
-    let content = "Hello im tom";
-    let msg = new Message(content);
-    let submit = new SUBMIT(tom, msg);
-    console.log(submit);
+    let { name, email, message } = MessageView;
+    let newUser = new User(name, email);
+    let newMessage = new Message(message);
+    let newSubmit = new SUBMIT(newUser, newMessage);
+    console.log(newSubmit);
   } catch (error) {
     console.log(error);
   }
