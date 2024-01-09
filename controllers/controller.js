@@ -6,9 +6,9 @@ let logMessage = (eve) => {
     eve.preventDefault();
     let tom = new User("Tom", "Sidibe");
     let content = "Hello im tom";
-    let msg = new Message(tom, content);
+    let msg = new Message(content);
     let submit = new SUBMIT(tom, msg);
-    console.log(msg);
+    console.log(submit);
   } catch (error) {
     console.log(error);
   }

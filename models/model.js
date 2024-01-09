@@ -26,18 +26,15 @@ export class User {
   }
 }
 export class Message {
-  constructor(submitter, content) {
-    this.id =
-      submitter.id.slice(3) + 0 + 0 + Math.floor(Math.random() * 100) ** 5;
-    this.submitter = submitter;
+  constructor(content) {
     this.content = content;
   }
 }
 export class SUBMIT {
-  user;
-  message;
-  constructor(user, message) {
+  constructor(submitter, message) {
+    this.id =
+      submitter.id.slice(3) + 0 + 0 + Math.floor(Math.random() * 100) ** 5;
+    this.submitter = submitter;
     this.message = message;
-    this.user = user;
   }
 }
