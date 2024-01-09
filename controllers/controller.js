@@ -27,13 +27,17 @@ let logMessage = (eve) => {
     console.log(getSubmitFromLs(newSubmit.id));
 
     console.log(newSubmit);
+    gotoChat();
   } catch (error) {
     console.log(error);
   }
 };
-
+function gotoChat() {
+  window.location = "/chat.html";
+}
 let init = () => {
   MessageView.Handler(logMessage);
+  MessageView.cleanMsgInput();
 };
 
 init();

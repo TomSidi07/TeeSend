@@ -21,6 +21,11 @@ class MessageView {
   get message() {
     return this.userMessage.value;
   }
+  cleanMsgInput() {
+    this.teeBtn.addEventListener("click", () => {
+      this.userMessage.value = "";
+    });
+  }
 }
 export default new MessageView();
 /* class AddTransactionView {
