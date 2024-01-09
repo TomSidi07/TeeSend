@@ -1,3 +1,4 @@
+// User class
 export class User {
   id;
   username;
@@ -10,10 +11,7 @@ export class User {
         email.length >= 3 &&
         username.length >= 3
       ) {
-        this.id =
-          username.slice(0, 3) +
-          email.slice(0, 3) +
-          Math.round(Math.random() * 100 + 1);
+        this.id = username.slice(0, 3) + email.slice(0, 3) + 0 + 0 + 1;
         this.username = username;
         this.email = email;
       } else
@@ -25,11 +23,13 @@ export class User {
     }
   }
 }
+// Message Class
 export class Message {
   constructor(content) {
     this.content = content;
   }
 }
+// Submit class
 export class SUBMIT {
   constructor(submitter, message) {
     this.id =
