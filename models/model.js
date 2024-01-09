@@ -20,6 +20,6 @@ export class Message {
   }
 }
 export let SUBMIT = {
-  user: this.user,
-  message: this.message,
+  // user: this.user,
+  // message: this.message,
 };
